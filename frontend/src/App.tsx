@@ -20,7 +20,7 @@ function WalletButton() {
   return (
     <div className="relative">
       <button onClick={() => setOpen(o => !o)}
-        className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg font-mono text-sm transition-colors">
+        className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg font-mono text-sm text-white transition-colors">
         <span className={`w-2 h-2 rounded-full ${wrongNetwork ? "bg-red-400" : "bg-green-400"}`} />
         {address.slice(0, 6)}…{address.slice(-4)}
       </button>

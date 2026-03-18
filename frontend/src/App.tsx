@@ -203,7 +203,7 @@ function LandingPage() {
     { icon: "🦀", title: "Rust on PVM", desc: "Monte Carlo (10k paths) + genetic optimizer compiled to RISC-V. 14× cheaper than EVM." },
     { icon: "🌐", title: "XCM Rebalancing", desc: "Native cross-parachain asset allocation via Polkadot Hub XCM precompile. No bridges." },
     { icon: "🗳️", title: "On-chain Governance", desc: "Strategy parameters controlled by DOT holders via Polkadot governance precompile." },
-    { icon: "📊", title: "ERC-4626 Vault", desc: "Standard composable vault interface. Deposit DOT, receive pvmMAX shares, earn yield." },
+    { icon: "📊", title: "ERC-4626 Vault", desc: "Standard composable vault interface. Deposit DOT, receive optiDOT shares, earn yield." },
   ];
 
   return (
@@ -265,7 +265,7 @@ function LandingPage() {
 function HowItWorks() {
   const steps = [
     { step: "01", title: "Deposit DOT", tag: "Native Assets Precompile",
-      desc: "Deposit native DOT into the ERC-4626 vault. Receive pvmMAX shares representing your proportional ownership." },
+      desc: "Deposit native DOT into the ERC-4626 vault. Receive optiDOT shares representing your proportional ownership." },
     { step: "02", title: "PVM Runs the Math", tag: "PVM-Experiments (Rust)",
       desc: "On each rebalance: 10,000-path Monte Carlo simulation + 200-generation genetic algorithm evolves optimal weights. Sharpe ratio and 95% VaR computed — all on-chain in Rust." },
     { step: "03", title: "XCM Rebalances Across Parachains", tag: "XCM Precompile",
@@ -284,7 +284,7 @@ function HowItWorks() {
   return (
     <div className="space-y-12">
       <div>
-        <h2 className="font-serif font-bold text-4xl mb-2">How PolkaVaultMax Works</h2>
+        <h2 className="font-serif font-bold text-4xl mb-2">How OptiDot Works</h2>
         <p className="text-text-dim">Four layers of Polkadot-native technology, working together.</p>
       </div>
       <div className="space-y-6">

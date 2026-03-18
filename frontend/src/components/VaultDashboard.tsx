@@ -202,7 +202,7 @@ export default function VaultDashboard() {
             <div className="mt-6 pt-6 border-t border-app-border space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-text-dim">Your shares</span>
-                <span className="font-medium">{parseFloat(metrics.userShares).toFixed(4)} pvmMAX</span>
+                <span className="font-medium">{parseFloat(metrics.userShares).toFixed(4)} optiDOT</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-text-dim">Your assets</span>

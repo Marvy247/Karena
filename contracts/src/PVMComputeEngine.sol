@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import "./interfaces/IPolkadotPrecompiles.sol";
 
 /// @title PVMComputeEngine
-/// @notice Solidity ABI surface over the PolkaVaultMax Rust library.
+/// @notice Solidity ABI surface over the OptiDot Rust library.
 ///         Compiled with resolc to RISC-V (PolkaVM) bytecode.
 ///         Rust symbols: monte_carlo_simulate, genetic_optimize, compute_sharpe, compute_var
 contract PVMComputeEngine {

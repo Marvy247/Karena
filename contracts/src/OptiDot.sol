@@ -7,10 +7,10 @@ import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "./StrategyManager.sol";
 import "./interfaces/IPolkadotPrecompiles.sol";
 
-/// @title PolkaVaultMax
+/// @title OptiDot
 /// @notice ERC-4626 autonomous yield vault powered by PVM Monte Carlo + genetic optimization.
 /// PVM Track: PVM-experiments + Native Assets + XCM/Governance Precompiles
-contract PolkaVaultMax is ERC4626, Ownable, ReentrancyGuard {
+contract OptiDot is ERC4626, Ownable, ReentrancyGuard {
     IXCMPrecompile public constant XCM =
         IXCMPrecompile(0x0000000000000000000000000000000000000800);
     IAssetsPrecompile public constant ASSETS =
@@ -47,7 +47,7 @@ contract PolkaVaultMax is ERC4626, Ownable, ReentrancyGuard {
     error NoActiveStrategies();
 
     constructor(IERC20 asset_, address pvmCompute_, address strategyManager_)
-        ERC4626(asset_) ERC20("PolkaVaultMax Shares", "pvmMAX") Ownable(msg.sender)
+        ERC4626(asset_) ERC20("OptiDot Shares", "optiDOT") Ownable(msg.sender)
     {
         pvmCompute = IPVMCompute(pvmCompute_);
         strategyManager = StrategyManager(strategyManager_);

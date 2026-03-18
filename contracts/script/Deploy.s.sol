@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import "forge-std/Script.sol";
 import "../src/PVMComputeEngine.sol";
 import "../src/StrategyManager.sol";
-import "../src/PolkaVaultMax.sol";
+import "../src/OptiDot.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract MockDOT is ERC20 {
@@ -12,7 +12,7 @@ contract MockDOT is ERC20 {
     function decimals() public pure override returns (uint8) { return 10; }
 }
 
-contract DeployPolkaVaultMax is Script {
+contract DeployOptiDot is Script {
     function run() external {
         uint256 deployerKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(deployerKey);
@@ -26,8 +26,8 @@ contract DeployPolkaVaultMax is Script {
         StrategyManager manager = new StrategyManager();
         console.log("StrategyManager:", address(manager));
 
-        PolkaVaultMax vault = new PolkaVaultMax(IERC20(address(dot)), address(compute), address(manager));
-        console.log("PolkaVaultMax:", address(vault));
+        OptiDot vault = new OptiDot(IERC20(address(dot)), address(compute), address(manager));
+        console.log("OptiDot:", address(vault));
 
         dot.approve(address(vault), type(uint256).max);
         console.log("Approval set. Deposit manually after deployment.");

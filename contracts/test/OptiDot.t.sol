@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import "forge-std/Test.sol";
 import "../src/PVMComputeEngine.sol";
 import "../src/StrategyManager.sol";
-import "../src/PolkaVaultMax.sol";
+import "../src/OptiDot.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract MockDOT is ERC20 {
@@ -13,14 +13,14 @@ contract MockDOT is ERC20 {
     function mint(address to, uint256 amount) external { _mint(to, amount); }
 }
 
-contract PolkaVaultMaxTest is Test {
-    MockDOT dot; PVMComputeEngine compute; StrategyManager manager; PolkaVaultMax vault;
+contract OptiDotTest is Test {
+    MockDOT dot; PVMComputeEngine compute; StrategyManager manager; OptiDot vault;
     address alice = makeAddr("alice"); address bob = makeAddr("bob");
 
     function setUp() public {
         dot = new MockDOT(); compute = new PVMComputeEngine();
         manager = new StrategyManager();
-        vault = new PolkaVaultMax(IERC20(address(dot)), address(compute), address(manager));
+        vault = new OptiDot(IERC20(address(dot)), address(compute), address(manager));
         dot.mint(alice, 100_000 * 1e10); dot.mint(bob, 50_000 * 1e10);
     }
 
@@ -88,7 +88,7 @@ contract PolkaVaultMaxTest is Test {
         vm.warp(block.timestamp + 2 hours);
         vm.startPrank(alice); dot.approve(address(vault), 1000 * 1e10); vault.deposit(1000 * 1e10, alice); vm.stopPrank();
         assertEq(vault.getRebalanceHistoryLength(), 1);
-        vm.expectRevert(PolkaVaultMax.CooldownNotElapsed.selector);
+        vm.expectRevert(OptiDot.CooldownNotElapsed.selector);
         vault.rebalance();
         vm.warp(block.timestamp + 3 hours);
         vault.rebalance();

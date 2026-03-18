@@ -1,4 +1,4 @@
-# PolkaVaultMax — PVM vs EVM Benchmark Results
+# OptiDot — PVM vs EVM Benchmark Results
 
 ## Methodology
 
@@ -51,13 +51,13 @@ PVM runs the full 10,000 paths within normal gas budget.
 ## Rust Library Size
 
 ```
-libpolkavaultmax.rlib:  ~45 KB (release, LTO)
+liboptidot.rlib:  ~45 KB (release, LTO)
 RISC-V bytecode:        ~12 KB (estimated post-resolc compilation)
 ```
 
 ## Conclusion
 
-PolkaVaultMax demonstrates the exact use case PVM was designed for:
+OptiDot demonstrates the exact use case PVM was designed for:
 **compute-intensive financial algorithms that are economically infeasible on EVM
 become practical and cheap on PolkaVM's RISC-V execution environment.**
 

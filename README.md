@@ -140,13 +140,14 @@ npm run dev
 
 ---
 
-## Deployed Contracts (Polkadot Hub Testnet)
+## Deployed Contracts (Polkadot Hub TestNet — Chain ID: 420420417)
 
 | Contract | Address |
 |---|---|
-| PolkaVaultMax | TBD after deployment |
-| PVMComputeEngine | TBD after deployment |
-| StrategyManager | TBD after deployment |
+| PolkaVaultMax | [0x3e23aCD980a8550Ecd71b589F517Dd632E0D7d98](https://blockscout-passet-hub.parity-testnet.parity.io/address/0x3e23aCD980a8550Ecd71b589F517Dd632E0D7d98) |
+| PVMComputeEngine | [0x696dCC6E2B95D57F954d9fe78eBF0E8B75Ecea65](https://blockscout-passet-hub.parity-testnet.parity.io/address/0x696dCC6E2B95D57F954d9fe78eBF0E8B75Ecea65) |
+| StrategyManager | [0xb08c332E097726c81CBB8aA48D6AEF2Cd67602Bc](https://blockscout-passet-hub.parity-testnet.parity.io/address/0xb08c332E097726c81CBB8aA48D6AEF2Cd67602Bc) |
+| MockDOT | [0x241dEDF00F4F7b10E23076F1039cDD874F1C28E0](https://blockscout-passet-hub.parity-testnet.parity.io/address/0x241dEDF00F4F7b10E23076F1039cDD874F1C28E0) |
 
 ---
 
